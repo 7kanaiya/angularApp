@@ -39,15 +39,18 @@ import { Component, Input } from "@angular/core";
     <i class="fa fa-2x " aria-hidden="true"
     [class.fa-heart-o] = "isLiked"
     [class.fa-heart] = "!isLiked"
+    [class.heart-color]="colorActive"
 
     (click) = "onLikeClick()"
     ></i>
     {{likeCount}}
     
-
-
     `,
     styles:[`
+
+        .heart-color{
+            color:red;
+        }
         .content{
             width:200px;
             height:200px;
@@ -65,6 +68,7 @@ export class userComponent{
     public chooseColor:boolean = true;
     public chooseClass:boolean = true;
     public isLiked:boolean = true;
+    public colorActive:boolean = false;
     @Input() public likeCount:number;
 
     action(){
@@ -76,6 +80,7 @@ export class userComponent{
 
     onLikeClick(){
         this.isLiked = !this.isLiked;
+        this.colorActive = !this.colorActive;
         this.isLiked?this.likeCount--:this.likeCount++;
     }
 }

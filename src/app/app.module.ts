@@ -5,9 +5,10 @@ import { AppComponent } from './app.component';
 import { ListComponent } from "./list.component";
 import { List } from "./list";
 import { userComponent } from './user.component';
+import { GenderComponent } from './gender.component';
 @NgModule({
   declarations: [
-    AppComponent, ListComponent, userComponent
+    AppComponent, ListComponent, userComponent, GenderComponent
   ],
   imports: [
     BrowserModule, 

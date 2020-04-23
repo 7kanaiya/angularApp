@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <button type="button" class="btn btn-outline-primary"
+            style="margin-right: 10px;"
+            (click)="selectUser = male"
+            >Male</button>
+            <button type="button" class="btn btn-outline-danger"
+            (click)="selectUser = female"
+            >Female</button>
+        </div>
+        <div class="col-md=12">
+            <img src="{{selectUser.imgurl}}">
+            <h2>{{selectUser.name}}</h2>
+        </div>
+    </div>
+</div>
