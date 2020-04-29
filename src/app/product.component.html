@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-2" style="margin: 10px;">
+      <app-mobile (data)="displayData($event)"></app-mobile>
+      <app-laptops (data)="displayData($event)"></app-laptops>
+      <app-kitchen (data)="displayData($event)"></app-kitchen>
+    </div>
+    <div class="col-md-9" style="margin: 10px;">
+      <div class="row">
+        <div class="col-md-4" *ngFor="let list of lists">
+          <div class="card text-left" style="margin: 10px;">
+            <img class="card-img-top" src="{{ list.imgurl }}" alt="" />
+            <div class="card-body">
+              <h5 class="card-title">{{ list.devName }}</h5>
+              <p class="card-text">{{ list.price | currency: "INR" }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

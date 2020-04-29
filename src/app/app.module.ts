@@ -10,6 +10,10 @@ import { ParentComponent } from './parent.component';
 import { ChildComponent } from './child.component';
 import { SongListComponent } from './songlist.component';
 import { SongComponent } from './song.component';
+import { ProductComponent } from './product.component';
+import { MobileComponent } from './mobile.component';
+import { LaptopsComponent } from './laptops.component';
+import { KitchenComponent } from './kitchen.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +24,10 @@ import { SongComponent } from './song.component';
     ChildComponent,
     SongListComponent,
     SongComponent,
+    ProductComponent,
+    MobileComponent,
+    LaptopsComponent,
+    KitchenComponent,
   ],
   imports: [BrowserModule],
   providers: [List],
