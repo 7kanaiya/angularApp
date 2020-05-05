@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
 import { ListComponent } from './list.component';
 import { List } from './list';
@@ -14,6 +13,11 @@ import { ProductComponent } from './product.component';
 import { MobileComponent } from './mobile.component';
 import { LaptopsComponent } from './laptops.component';
 import { KitchenComponent } from './kitchen.component';
+import { NavigationComponent } from './navigation/navigation.component';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { RouterModule } from '@angular/router';
+import { routes } from './app.routes';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,8 +32,11 @@ import { KitchenComponent } from './kitchen.component';
     MobileComponent,
     LaptopsComponent,
     KitchenComponent,
+    NavigationComponent,
+    HomeComponent,
+    AboutComponent,
   ],
-  imports: [BrowserModule],
+  imports: [BrowserModule, RouterModule.forRoot(routes)],
   providers: [List],
   bootstrap: [AppComponent],
 })
