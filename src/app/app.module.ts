@@ -18,6 +18,9 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { RouterModule } from '@angular/router';
 import { routes } from './app.routes';
+import { ProductsComponent } from './products/products.component';
+import { HttpClientModule } from '@angular/common/http';
+import { PostServices } from './services/post.services';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,9 +38,10 @@ import { routes } from './app.routes';
     NavigationComponent,
     HomeComponent,
     AboutComponent,
+    ProductsComponent,
   ],
-  imports: [BrowserModule, RouterModule.forRoot(routes)],
-  providers: [List],
+  imports: [BrowserModule, RouterModule.forRoot(routes), HttpClientModule],
+  providers: [List, PostServices],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
