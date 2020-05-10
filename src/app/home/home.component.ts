@@ -9,6 +9,8 @@ import { PostServices } from '../services/post.services';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
+  public posts;
+  public loader: boolean = true;
   constructor(private postServices: PostServices) {}
 
   ngOnInit(): void {
@@ -24,7 +26,12 @@ export class HomeComponent implements OnInit {
     });
 
     this.postServices.fetchUserPost().subscribe((data) => {
-      console.log(data);
+      setTimeout(() => {
+        this.loader = false;
+        this.posts = data;
+      }, 1000);
+
+      // console.log(data);
     });
   }
 }

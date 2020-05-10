@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class PostServices {
   private POSTS_ENDPOINT = 'https://jsonplaceholder.typicode.com/posts';
   constructor(private http: HttpClient) {}

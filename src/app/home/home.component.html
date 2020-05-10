@@ -10,3 +10,37 @@
     />
   </div>
 </div>
+<div class="container" style="margin: 20px 0 20px 0;">
+  <div class="row" *ngIf="loader" style="margin: 20px 0 20px 0;">
+    <div class="col-md-4 customShimmer">
+      <shimmer [width]="'100%'" [type]="'square'"></shimmer>
+    </div>
+    <div class="col-md-4 customShimmer">
+      <shimmer [width]="'100%'" [type]="'square'"></shimmer>
+    </div>
+    <div class="col-md-4 customShimmer">
+      <shimmer [width]="'100%'" [type]="'square'"></shimmer>
+    </div>
+  </div>
+  <div class="row" *ngIf="loader" style="margin: 20px 0 20px 0;">
+    <div class="col-md-4 customShimmer">
+      <shimmer [width]="'100%'" [type]="'square'"></shimmer>
+    </div>
+    <div class="col-md-4 customShimmer">
+      <shimmer [width]="'100%'" [type]="'square'"></shimmer>
+    </div>
+    <div class="col-md-4 customShimmer">
+      <shimmer [width]="'100%'" [type]="'square'"></shimmer>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4" *ngFor="let post of posts">
+      <div class="card text-left">
+        <div class="card-body">
+          <h4 class="card-title">{{ post.title }}</h4>
+          <p class="card-text">{{ post.body }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

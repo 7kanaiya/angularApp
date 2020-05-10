@@ -20,7 +20,9 @@ import { RouterModule } from '@angular/router';
 import { routes } from './app.routes';
 import { ProductsComponent } from './products/products.component';
 import { HttpClientModule } from '@angular/common/http';
-import { PostServices } from './services/post.services';
+import { ShimmerModule } from '@sreyaj/ng-shimmer';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,8 +42,14 @@ import { PostServices } from './services/post.services';
     AboutComponent,
     ProductsComponent,
   ],
-  imports: [BrowserModule, RouterModule.forRoot(routes), HttpClientModule],
-  providers: [List, PostServices],
+  imports: [
+    BrowserModule,
+    RouterModule.forRoot(routes),
+    HttpClientModule,
+    ShimmerModule,
+    NoopAnimationsModule,
+  ],
+  providers: [List],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
