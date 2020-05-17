@@ -22,6 +22,11 @@ import { ProductsComponent } from './products/products.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ShimmerModule } from '@sreyaj/ng-shimmer';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { customPipe } from './custom.pipe';
+import { AlbumComponent } from './albums.component';
+import { SearchComponent } from './search.component';
+import { FormsModule } from '@angular/forms';
+import { SearchPipe } from './search.pipe';
 
 @NgModule({
   declarations: [
@@ -41,6 +46,10 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     HomeComponent,
     AboutComponent,
     ProductsComponent,
+    customPipe,
+    AlbumComponent,
+    SearchComponent,
+    SearchPipe,
   ],
   imports: [
     BrowserModule,
@@ -48,6 +57,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     ShimmerModule,
     NoopAnimationsModule,
+    FormsModule,
   ],
   providers: [List],
   bootstrap: [AppComponent],

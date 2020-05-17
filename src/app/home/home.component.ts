@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { fromEvent } from 'rxjs';
 import { map, filter, debounceTime } from 'rxjs/operators';
 import { PostServices } from '../services/post.services';
+import { Iposts } from '../models/posts';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,7 @@ import { PostServices } from '../services/post.services';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  public posts;
+  public posts: Iposts;
   public loader: boolean = true;
   constructor(private postServices: PostServices) {}
 
@@ -29,7 +30,7 @@ export class HomeComponent implements OnInit {
       setTimeout(() => {
         this.loader = false;
         this.posts = data;
-      }, 1000);
+      }, 2000);
 
       // console.log(data);
     });
