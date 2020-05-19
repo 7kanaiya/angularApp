@@ -27,6 +27,9 @@ import { AlbumComponent } from './albums.component';
 import { SearchComponent } from './search.component';
 import { FormsModule } from '@angular/forms';
 import { SearchPipe } from './search.pipe';
+import { HomepageComponent } from './Product Project/homepage/homepage.component';
+import { ProductListComponent } from './Product Project/product-list/product-list.component';
+import { ProductSearch } from './Product Project/productsearch.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +53,9 @@ import { SearchPipe } from './search.pipe';
     AlbumComponent,
     SearchComponent,
     SearchPipe,
+    HomepageComponent,
+    ProductListComponent,
+    ProductSearch,
   ],
   imports: [
     BrowserModule,

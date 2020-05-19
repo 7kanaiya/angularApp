@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-sm navbar-dark bg-primary">
   <a class="navbar-brand" href="#">Navbar</a>
   <button
     class="navbar-toggler d-lg-none"
@@ -12,17 +12,14 @@
   <div class="collapse navbar-collapse" id="collapsibleNavId">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item active">
-        <a class="nav-link" routerLink="/home"
-          >Home <span class="sr-only">(current)</span></a
+        <a class="nav-link" routerLink="/homepage"
+          >Homepage <span class="sr-only">(current)</span></a
         >
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/about">About</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/products">Products</a>
+        <a class="nav-link" routerLink="/productlist">ProductList</a>
       </li>
     </ul>
   </div>
 </nav>
-<
+<router-outlet></router-outlet>

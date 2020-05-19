@@ -1,0 +1,28 @@
+<div class="container" style="border-color: blue 1px solid;">
+  <h3>Product List</h3>
+
+  <div class="row">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Image</th>
+          <th scope="col">Product</th>
+          <th scope="col">Code</th>
+          <th scope="col">Available</th>
+          <th scope="col">Price</th>
+          <th scope="col">5 Star Rating</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products | search: value">
+          <td><img src="{{ product.productImage }}" /></td>
+          <td>{{ product.product }}</td>
+          <td>{{ product.code }}</td>
+          <td>{{ product.available }}</td>
+          <td>{{ product.price }}</td>
+          <td>{{ product.rating }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -5,6 +5,8 @@ import { ProductComponent } from './product/product.component';
 import { GenderComponent } from './gender.component';
 import { SongListComponent } from './songlist.component';
 import { ProductsComponent } from './products/products.component';
+import { HomepageComponent } from './Product Project/homepage/homepage.component';
+import { ProductSearch } from './Product Project/productsearch.component';
 
 export const routes: Route[] = [
   {
@@ -36,5 +38,13 @@ export const routes: Route[] = [
   {
     path: 'products',
     component: ProductsComponent,
+  },
+  {
+    path: 'homepage',
+    component: HomepageComponent,
+  },
+  {
+    path: 'productlist',
+    component: ProductSearch,
   },
 ];
